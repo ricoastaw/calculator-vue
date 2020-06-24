@@ -3,6 +3,25 @@
     <div class="display">{{current || '0'}}</div>
     <div @click="clear" class="btn">AC</div>
     <div @click="sign" class="btn">+/-</div>
+<<<<<<< HEAD
+    <div class="btn">%</div>
+    <div class="btn operator">+</div>
+    <div class="btn">7</div>
+    <div class="btn">8</div>
+    <div class="btn">9</div>
+    <div class="btn operator">x</div>
+    <div class="btn">4</div>
+    <div class="btn">5</div>
+    <div class="btn">6</div>
+    <div class="btn operator">-</div>
+    <div class="btn">1</div>
+    <div class="btn">2</div>
+    <div class="btn">3</div>
+    <div class="btn operator">+</div>
+    <div class="btn zero">0</div>
+    <div class="btn">.</div>
+    <div class="btn operator">=</div>
+=======
     <div @click="percent" class="btn">%</div>
     <div @click="divide" class="btn operator">/</div>
     <div @click="append('7')" class="btn">7</div>
@@ -20,6 +39,7 @@
     <div @click="append('0')" class="btn zero">0</div>
     <div @click="dot" class="btn">.</div>
     <div @click="equal" class="btn operator">=</div>
+>>>>>>> 54f5681b16eb137e6a316992c3482465f62a9b5f
   </div>
 </template>
 
@@ -27,10 +47,15 @@
 export default {
   data() {
     return{
+<<<<<<< HEAD
+      current:'999',
+
+=======
       previous: null,
       current:'',
       operator: null,
       operatorClicked: false,
+>>>>>>> 54f5681b16eb137e6a316992c3482465f62a9b5f
     }
   },
   methods: {
@@ -38,6 +63,10 @@ export default {
       this.current = '';
     },
     sign() {
+<<<<<<< HEAD
+      this.current = this.current.charAt(0) === '-' ?
+        this.current.slice(1) : '-s{this.current}'; 
+=======
       this.current = this.current.charAt(0) === '-'  ?
         this.current.slice(1) : `-${this.current}` ; 
     },
@@ -84,6 +113,7 @@ export default {
         parseFloat(this.previous)
       )}`;
       this.previous=null;
+>>>>>>> 54f5681b16eb137e6a316992c3482465f62a9b5f
     }
   }
 }
